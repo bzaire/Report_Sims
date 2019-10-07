@@ -8,6 +8,16 @@
 
 \documentclass{iau} 
 \usepackage{graphicx}
+\usepackage{physics}
+
+
+% Math operators:
+\DeclareMathOperator{\ra}{\mathrm{Ra}}
+\DeclareMathOperator{\rac}{\mathrm{Ra_c}}
+\DeclareMathOperator{\ek}{\mathrm{E}}
+\DeclareMathOperator{\pr}{\mathrm{Pr}}
+\DeclareMathOperator{\prmag}{\mathrm{Pm}}
+\DeclareMathOperator{\di}{\mathrm{Di}}
 
 \title[Dynamo simulations with double layer] %% give here short title %%
 {Dipolar stability in spherical simulations: the impact of an inner stable zone}
@@ -41,7 +51,45 @@ $^1$email: {\tt bzaire@irap.omp.eu} ;  $^2$email: {\tt ljouve@irap.omp.eu}}
 \section{Introduction}
 
 
-\section{Methods}
+\section{Governing equations}
+
+We perform $3D$ magnetohydrodynamic simulations of a stratified fluid in a spherical shell of outer radius 
+$r_\mathrm{o}$ and inner radius $r_\mathrm{i}$. We use the anelastic version of the code MagIC to solve the 
+non-dimensional equations that govern convective motions and magnetic field generation.
+
+\begin{equation}
+\pdv{\va{u}}{t}  + \va{u} \cdot \grad \va{u} + \frac{2}{\ek}\vu{e}_z\cross\va{u}  = - \grad p^\star + \frac{\ra}{\pr} gs'\vu{e}_r  + \frac{1}{\prmag\ek\bar{\rho}}(\curl \va{B} )\cross\va{B}
++ \va{F}_\nu, 
+\end{equation}
+
+\begin{equation}
+\div(\bar{\rho} \va{u}) = 0,  
+\end{equation}
+
+\begin{equation} 
+\bar{\rho}\bar{T}\left(\pdv{s'}{t}  + \va{u} \cdot \grad s'\right) +u_\mathrm{r}\dv{\bar{s}}{r}  = \frac{1}{\pr}  \div(\bar{\kappa} \bar{\rho} \bar{T} \grad s')  
++ \frac{\pr\di}{\ra}Q_\nu + \frac{\pr\di}{\prmag^2\ek\ra}\lambda(\curl\va{B})^2,
+\end{equation}
+
+\begin{equation} 
+\pdv{\va{B}}{t}   = \curl( \va{u}\cross\va{B} ) -\frac{1}{\prmag}\curl( \lambda \curl\va{B}),
+\end{equation}
+
+\begin{equation}
+\div \va{B} = 0,  
+\end{equation}
+
+
+
+
+Our reference state is represented by an ideal gas nearly adiabatic, given by
+\begin{equation} 
+\frac{1}{\bar{T}}\pdv{\bar{T}}{r}  =  \epsilon_\mathrm{s} \dv{\bar{s}}{r}  - \di \bar{\alpha}g(r),  
+\end{equation}
+
+\begin{equation} 
+\frac{1}{\bar{\rho}}\pdv{\bar{\rho}}{r}  =  \epsilon_\mathrm{s} \dv{\bar{s}}{r}  - \frac{\di \bar{\alpha}}{\Gamma}g(r)
+\end{equation}
 
 
 \section{Implications}
@@ -54,5 +102,5 @@ $^1$email: {\tt bzaire@irap.omp.eu} ;  $^2$email: {\tt ljouve@irap.omp.eu}}
 
 
 \end{thebibliography}
-
 \end{document}
+
