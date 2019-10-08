@@ -1,5 +1,7 @@
 # Reports of simulations 
 
+## Rendering the reports:
+go to https://nbviewer.jupyter.org and paste the github link to the notebook.
 
 
 ## _Notebooks_:
