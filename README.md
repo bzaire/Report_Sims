@@ -16,6 +16,8 @@ go to https://nbviewer.jupyter.org and paste the github link to the notebook.
     
 - Notebook 3.2: Check the boundary condition impact in the partially convective case;
 
+- Notebook 4: Magnetic results of FC and PC sims. Constant entropy used as BC;
 
-    
+- Notebook 5: Magnetic results of FC and PC sims. Derivative of entropy used as BC;
+
     
