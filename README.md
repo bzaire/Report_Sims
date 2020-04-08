@@ -4,7 +4,27 @@
 go to https://nbviewer.jupyter.org and paste the github link to the notebook.
 
 
+
+
+
 ## _Notebooks_:
+
+------------------ NEW ------------------
+
+1 - Summary.ipynb	
+
+2 - Setup.ipynb	
+
+3 - TimeSeries.ipynb	
+
+4 - MeanFlows.ipynb
+
+5 - MeanField.ipynb
+
+6 - Scaling.ipynb	
+
+
+------------------ OLD ------------------
 
 - Notebook 0: HD simulations with different aspect ratio;
 
